@@ -1,5 +1,5 @@
 # Názov projektu
-Webová stránka pre prenajímateľa priestorov
+Webová aplikácia pre prenajímateľa priestorov
 
 Benjamín Pisca
 
