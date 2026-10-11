@@ -4,6 +4,7 @@ Webová stránka pre prenajímateľa priestorov
 Benjamín Pisca
 
 Študijná skupina: 5ZYI33
+
 Navštivované cvičenie: Pondelok 12:00
 
 ## Stručný opis projektu
@@ -65,8 +66,8 @@ Administrátor:
 
 ## Hlavné stránky aplikácie
 - Domov – úvodná stránka s predstavením priestoru
-- O nás – informácie o priestore a možnostiach, historía
-- Galéria – fotogaléria priestorov
+- O nás – informácie o priestore a možnostiach, história
+- Galéria – fotogaléria priestorov, budú tam fotoalbumy na rozkliknutie
 - Cenník / Balíky – prehľad dostupných balíkov
 - Rezervácia – formulár na vytvorenie predbežnej rezervácie
 - Recenzie – zobrazenie schválených recenzií
@@ -90,7 +91,6 @@ Základné funkcie:
     - prihlasení
 
 Rozširujúce funkcie:
-- Vlastný responzívny dizajn
 - Kalendár dostupnosti termínov
 - Pokročile filtrovanie a stránkovanie recenzií na zakláde určených kritérii
 - Pokročilá validácia formulárov(napr. validácia emailu, tel. čísla, textu bez nadávok) na strane klienta
