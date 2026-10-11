@@ -1,9 +1,5 @@
-# Semestrálna práca - vývoj webových aplikácií
-
 # Názov projektu
 Webová stránka pre prenajímateľa priestorov
-
-Rezervačný systém svadobnej stodoly
 
 Benjamín Pisca
 
@@ -65,7 +61,7 @@ Administrátor:
 - Používateľ → Recenzia (1:N)
 - Používateľ → Správa (1:N) 
 - Fotoalbum
-- Fotografia → Fotoalbum ()
+- Fotografia → Fotoalbum (1:N)
 
 ## Hlavné stránky aplikácie
 - Domov – úvodná stránka s predstavením priestoru
@@ -103,3 +99,4 @@ Rozširujúce funkcie:
     - použitie Google mapy
     - odosielanie emailov cez Gmail SMTP
     - Facebook / Instagram API/ Google API pre zobrazovanie recenzií
+    - Drag and Drop API - Umožňuje jednoducho chytiť prvok myšou a presunúť ho na iné miesto na stránke.
