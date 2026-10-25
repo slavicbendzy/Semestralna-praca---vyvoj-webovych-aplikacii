@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Administrácia Villa Lúka – prehľad rezervácií a podujatí.">
+  <title>Villa Lúka | Administrácia</title>
+  <link rel="stylesheet" href="administracia.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <a class="admin-brand" href="domov.html"><span>villa lúka</span><small>Administrácia</small></a>
+      <nav class="side-nav" aria-label="Administrácia">
+        <a class="selected" href="#prehled"><span aria-hidden="true">▦</span>Prehľad</a>
+        <a href="#rezervacie"><span aria-hidden="true">▣</span>Rezervácie <b>5</b></a>
+        <a href="#kalendar"><span aria-hidden="true">▦</span>Kalendár</a>
+        <a href="#galeria"><span aria-hidden="true">▧</span>Fotogaléria</a>
+        <a href="#cennik"><span aria-hidden="true">◇</span>Cenník a balíky</a>
+        <a href="#recenzie"><span aria-hidden="true">☆</span>Recenzie <b>3</b></a>
+        <a href="#spravy"><span aria-hidden="true">▱</span>Správy <b>4</b></a>
+        <a href="#prehled"><span aria-hidden="true">⚙</span>Nastavenia</a>
+      </nav>
+      <a class="public-link" href="domov.html"><span aria-hidden="true">↗</span>Zobraziť verejný web</a>
+      <div class="user-card"><strong>Anna Novotná</strong><span>Správkyňa priestoru · <button class="logout-button" type="button">Odhlásiť sa</button></span></div>
+    </aside>
+
+    <div class="admin-main">
+      <header class="topbar">
+        <p>Administrácia / Prehľad</p>
+        <div><span>Pondelok, 12. október 2026</span><button class="icon-button" aria-label="Oznámenia">♧</button><span class="avatar">AN</span></div>
+      </header>
+
+      <main class="dashboard" id="prehled">
+        <div class="welcome">
+          <div><h1>Dobré ráno, Anna.</h1><p>Dnes na vás čaká 5 dopytov, 3 recenzie a 4 nové správy.</p></div>
+          <a class="button" href="#rezervacie">Pridať rezerváciu</a>
+        </div>
+
+        <section class="stats" aria-label="Súhrnné štatistiky">
+          <article><p>Predbežné dopyty</p><strong>5</strong><span>2 nové od včera</span></article>
+          <article><p>Potvrdené podujatia</p><strong>24</strong><span>Sezóna 2027</span></article>
+          <article><p>Obsadenosť sobôt</p><strong>68 %</strong><span>Máj – september 2027</span></article>
+          <article><p>Čakajúce položky</p><strong>7</strong><span>3 recenzie · 4 správy</span></article>
+        </section>
+
+        <section class="reservation-layout" id="rezervacie">
+          <article class="panel reservations-panel">
+            <div class="panel-heading"><h2>Posledné rezervácie</h2><a href="#rezervacie">Všetky rezervácie ↗</a></div>
+            <form class="filters" action="#rezervacie">
+              <label class="search-field"><span aria-hidden="true">⌕</span><input type="search" placeholder="Meno alebo číslo rezervácie" aria-label="Meno alebo číslo rezervácie"></label>
+              <label class="sr-only" for="status">Filtrovať podľa stavu</label>
+              <select id="status"><option>Všetky stavy</option><option>Na posúdenie</option><option>Potvrdená</option></select>
+            </form>
+            <div class="table-scroll">
+              <table>
+                <thead><tr><th>Číslo</th><th>Klient / balík</th><th>Termín</th><th>Hostia</th><th>Stav</th><th><span class="sr-only">Možnosti</span></th></tr></thead>
+                <tbody>
+                  <tr class="current"><td data-label="Číslo">2027-042</td><td data-label="Klient / balík"><strong>Martina Kováčová</strong><small>Svadba v záhrade</small></td><td data-label="Termín">19. 06. 2027</td><td data-label="Hostia">80</td><td data-label="Stav"><span class="badge badge-waiting">Na posúdenie</span></td><td><button class="more-button" aria-label="Možnosti rezervácie 2027-042">•••</button></td></tr>
+                  <tr><td data-label="Číslo">2027-041</td><td data-label="Klient / balík"><strong>Laura &amp; Filip</strong><small>Príbeh na mieru</small></td><td data-label="Termín">26. 06. 2027</td><td data-label="Hostia">110</td><td data-label="Stav"><span class="badge badge-waiting">Čaká na zálohu</span></td><td><button class="more-button" aria-label="Možnosti rezervácie 2027-041">•••</button></td></tr>
+                  <tr><td data-label="Číslo">2027-040</td><td data-label="Klient / balík"><strong>Nina &amp; Patrik</strong><small>Čistá elegancia</small></td><td data-label="Termín">12. 06. 2027</td><td data-label="Hostia">70</td><td data-label="Stav"><span class="badge badge-confirmed">Potvrdená</span></td><td><button class="more-button" aria-label="Možnosti rezervácie 2027-040">•••</button></td></tr>
+                  <tr><td data-label="Číslo">2026-073</td><td data-label="Klient / balík"><strong>Mária &amp; Ján</strong><small>Svadba v záhrade</small></td><td data-label="Termín">10. 10. 2026</td><td data-label="Hostia">95</td><td data-label="Stav"><span class="badge badge-done">Uskutočnená</span></td><td><button class="more-button" aria-label="Možnosti rezervácie 2026-073">•••</button></td></tr>
+                  <tr><td data-label="Číslo">2027-038</td><td data-label="Klient / balík"><strong>Blue Oak s.r.o.</strong><small>Firemné podujatie</small></td><td data-label="Termín">04. 06. 2027</td><td data-label="Hostia">40</td><td data-label="Stav"><span class="badge badge-cancelled">Zrušená</span></td><td><button class="more-button" aria-label="Možnosti rezervácie 2027-038">•••</button></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="table-footer"><span>1 – 5 z 42 rezervácií</span><nav aria-label="Stránkovanie"><button type="button" aria-label="Predchádzajúca strana">←</button><span>1 / 9</span><button type="button" aria-label="Nasledujúca strana">→</button></nav></div>
+          </article>
+
+          <article class="panel inquiry-panel">
+            <p class="eyebrow">Vybraný dopyt · 2027-042</p>
+            <h2>Martina Kováčová</h2>
+            <span class="badge badge-waiting">Čaká na posúdenie</span>
+            <p class="inquiry-details">19. jún 2027 · 80 hostí<br>Svadba v záhrade · od 4 200 €<br>martina.kovacova@example.com<br>+421 905 123 456</p>
+            <blockquote>„Radi by sme mali obrad v záhrade a večeru v oranžérii. Zaujímala by nás aj obhliadka cez víkend.“</blockquote>
+            <span class="badge badge-confirmed">Termín bez kolízie</span>
+            <div class="inquiry-actions"><button class="button">Poslať ponuku</button><div><button class="button button-secondary">Detail</button><button class="button button-secondary">Zamietnuť</button></div></div>
+            <p class="hint">Potvrdiť možno až po dohode, podpise zmluvy a prijatí zálohy.</p>
+          </article>
+        </section>
+
+        <section class="support-grid">
+          <article class="panel review-panel" id="recenzie">
+            <div class="panel-heading"><h2>Recenzie na schválenie</h2><span class="badge badge-waiting">3 čakajúce</span></div>
+            <strong>Mária &amp; Ján · 10. 10. 2026</strong>
+            <p class="stars" aria-label="5 z 5 hviezdičiek">★★★★★</p>
+            <p>„Nádherná jesenná svadba a úžasný tím. Celý deň bol bez starostí. Obzvlášť ďakujeme Anne za jej pokoj a ochotu.“</p>
+            <div class="button-row"><button class="button">Schváliť recenziu</button><button class="button button-secondary">Zamietnuť</button><a href="#recenzie">Ďalšie 2 →</a></div>
+          </article>
+          <article class="panel messages-panel" id="spravy">
+            <div class="panel-heading"><h2>Správy z webu</h2><span class="badge badge-waiting">4 nové</span></div>
+            <ul class="message-list">
+              <li><span class="message-dot"></span><div><strong>Ivana Horváthová</strong><small>Obhliadka priestoru</small></div><time> dnes, 09:12</time></li>
+              <li><span class="message-dot"></span><div><strong>Daniel Král</strong><small>Firemná večera pre 35 hostí</small></div><time>dnes, 08:45</time></li>
+            </ul>
+            <button class="button button-secondary">Otvoriť a odpovedať</button>
+          </article>
+        </section>
+
+        <section class="tools-grid">
+          <article class="panel tool-panel" id="galeria">
+            <h2>Fotogaléria</h2><div class="scene gallery-scene" role="img" aria-label="Svadobný pár vo vinici"></div>
+            <p>Lucia &amp; Martin · 9 fotografií</p><p class="muted">6 publikovaných albumov · 94 fotografií</p><a class="button button-secondary" href="#galeria">Spravovať albumy</a>
+          </article>
+          <article class="panel tool-panel" id="cennik">
+            <h2>Cenník a balíky</h2><span class="badge badge-confirmed">Sezóna 2027 · publikované</span>
+            <h3>Svadba v záhrade</h3><p class="price">od 4 200 €</p><p class="muted">3 svadobné balíky · 3 doplnkové služby<br>Posledná úprava: 8. 10. 2026</p><a class="button button-secondary" href="#cennik">Upraviť cenník</a>
+          </article>
+          <article class="panel tool-panel calendar-panel" id="kalendar">
+            <h2>Termíny</h2>
+            <div class="calendar-heading"><strong>Jún 2027</strong><span><button aria-label="Predchádzajúci mesiac">‹</button><button aria-label="Nasledujúci mesiac">›</button></span></div>
+            <table class="calendar-table" aria-label="Kalendár na jún 2027">
+              <thead><tr><th>Po</th><th>Ut</th><th>St</th><th>Št</th><th>Pi</th><th>So</th><th>Ne</th></tr></thead>
+              <tbody>
+                <tr><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td class="busy">5</td><td>6</td></tr>
+                <tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td class="busy">12</td><td>13</td></tr>
+                <tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td class="chosen">19</td><td>20</td></tr>
+                <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td class="busy">26</td><td>27</td></tr>
+                <tr><td>28</td><td>29</td><td>30</td><td></td><td></td><td></td><td></td></tr>
+              </tbody>
+            </table>
+            <div class="calendar-legend"><span><i class="free-dot"></i> Voľné</span><span><i class="busy-dot"></i> Obsadené</span><span><i class="free-dot"></i> Výber</span></div>
+            <a class="calendar-link" href="#kalendar">Spravovať kalendár →</a>
+          </article>
+        </section>
+        <footer class="dashboard-footer"><span>Villa Lúka · Ilustračné údaje administrácie</span><span>Všetky zmeny uložené · 10:24</span></footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
