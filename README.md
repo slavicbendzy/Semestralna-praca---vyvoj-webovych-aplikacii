@@ -100,3 +100,24 @@ Rozširujúce funkcie:
     - odosielanie emailov cez Gmail SMTP
     - Facebook / Instagram API/ Google API pre zobrazovanie recenzií
     - Drag and Drop API - Umožňuje jednoducho chytiť prvok myšou a presunúť ho na iné miesto na stránke.
+
+## Spustenie aplikácie
+
+Framework Vaííčko je umiestnený v koreňovom priečinku repozitára. Verejným koreňom aplikácie je `public`.
+Dokumentácia frameworku: [Vaííčko Wiki](https://github.com/thevajko/vaiicko/wiki/).
+
+Pri nainštalovanom PHP spustite v koreňovom priečinku:
+
+```powershell
+php -S 127.0.0.1:8000 -t public
+```
+
+Potom otvorte [http://127.0.0.1:8000/](http://127.0.0.1:8000/). Stránky Domov a O nás sú obsluhované akciami `HomeController::index` a `HomeController::about`; spoločná navigácia a päta sú v `App/Views/Layouts/root.layout.view.php`.
+
+Alternatívne možno spustiť webový kontajner Vaííčka cez Docker Compose:
+
+```powershell
+winget install PHP 8.3
+```
+
+Pri tomto spôsobe je aplikácia dostupná na [http://localhost/](http://localhost/).

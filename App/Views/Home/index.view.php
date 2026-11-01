@@ -1,0 +1,135 @@
+<?php
+
+/** @var \Framework\Support\LinkGenerator $link */
+?>
+<section class="hero scene scene-hero">
+    <div class="hero-content">
+        <p class="eyebrow">Svadby pod malokarpatským nebom</p>
+        <h1>Miesto, kde vaše áno rozkvitne.</h1>
+        <p>Historická vila, záhrada plná pokoja a deň, ktorý patrí iba vám. Vytvárame spolu váš svadobný príbeh.</p>
+        <div class="hero-actions">
+            <a class="button button-light" href="#priestory">Objaviť priestor <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline-light" href="#baliky">Pozrieť balíky <span aria-hidden="true">↗</span></a>
+        </div>
+    </div>
+    <p class="hero-location">Modra · Malé Karpaty · Slovensko</p>
+    <p class="hero-note">Jeden deň. Jeden príbeh. Vaše miesto.</p>
+</section>
+
+<section class="facts" aria-label="Villa Lúka v číslach">
+    <div><strong>120</strong><span>hostí pri slávnostnej tabuli</span></div>
+    <div><strong>2 ha</strong><span>záhrady a pokojných zákutí</span></div>
+    <div><strong>30 min</strong><span>od Bratislavy</span></div>
+    <div><strong>4,9 / 5</strong><span>hodnotenie našich párov</span></div>
+</section>
+
+<section class="intro content-width" id="priestory">
+    <div class="scene scene-hall" role="img" aria-label="Svetlá slávnostná sála pripravená na svadobnú hostinu"></div>
+    <div class="intro-copy">
+        <p class="eyebrow">Nie ste predstava. Príbeh.</p>
+        <h2>Veľké okamihy. Malé, nezabudnuteľné detaily.</h2>
+        <p>Za starými múrmi nájdete vilu s krídlami, ktoré dýchajú pokojom. Obklopená vinicami, ďaleko od každodenného zhonu, no blízko všetkým, na ktorých vám záleží.</p>
+        <p>Od prvého stretnutia po posledný tanec sa postaráme, aby ste svoj deň mohli skutočne prežiť.</p>
+        <a class="text-link" href="<?= $link->url('home.about') ?>">Spoznajte náš príbeh <span aria-hidden="true">↗</span></a>
+    </div>
+</section>
+
+<section class="celebrations">
+    <div class="content-width">
+        <p class="eyebrow">Priestor pre každú podobu príbehu</p>
+        <div class="section-heading">
+            <h2>Krásne chvíle majú mnoho podôb.</h2>
+            <p>Na mieru vám a vašim hosťom.</p>
+        </div>
+        <div class="celebration-grid">
+            <article><span class="line-icon" aria-hidden="true">♧</span><h3>Svadby</h3><p>Obrad pod stromami, večera v oranžérii a oslava až do posledného tanca.</p></article>
+            <article><span class="line-icon" aria-hidden="true">♧</span><h3>Rodinné oslavy</h3><p>Výročia, krstiny a malé stretnutia, ktoré si zaslúžia výnimočné miesto.</p></article>
+            <article><span class="line-icon" aria-hidden="true">♧</span><h3>Firemné podujatia</h3><p>Inšpiratívne prostredie pre workshopy, večere a stretnutia mimo kancelárie.</p></article>
+        </div>
+    </div>
+</section>
+
+<section class="gallery content-width" id="galeria">
+    <p class="eyebrow">Momenty z Villa Lúka</p>
+    <div class="section-heading">
+        <h2>Predstavte si tu svoj deň.</h2>
+        <a class="text-link" href="#kontakt">Celá galéria <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="gallery-grid">
+        <article><div class="scene scene-garden" role="img" aria-label="Záhradný svadobný obrad"></div><h3>Áno pod otvoreným nebom</h3></article>
+        <article><div class="scene scene-table" role="img" aria-label="Slávnostne prestretý svadobný stôl"></div><h3>Krása v každom detaile</h3></article>
+        <article><div class="scene scene-evening" role="img" aria-label="Večerná oslava vo vinici"></div><h3>Chvíle, ktoré zostávajú</h3></article>
+    </div>
+</section>
+
+<section class="steps">
+    <div class="content-width">
+        <p class="eyebrow">Jednoducho, spolu</p>
+        <h2>Od prvého ahoj po vaše áno.</h2>
+        <div class="steps-grid">
+            <article><span>01</span><h3>Vyberte si termín</h3><p>Pošlite nezáväznú predbežnú rezerváciu.</p></article>
+            <article><span>02</span><h3>Spoznajme sa</h3><p>Prejdeme dostupnosť a dohodneme obhliadku.</p></article>
+            <article><span>03</span><h3>Doladíme detaily</h3><p>Pripravíme ponuku na mieru a potvrdíme podmienky.</p></article>
+            <article><span>04</span><h3>Užite si svoj deň</h3><p>Vy tvoríte spomienky, my sa staráme o zvyšok.</p></article>
+        </div>
+    </div>
+</section>
+
+<section class="packages content-width" id="baliky">
+    <p class="eyebrow">Priestor pre vaše predstavy</p>
+    <h2>Váš deň. Váš spôsob.</h2>
+    <p class="section-lead">Tri možnosti, jeden výnimočný priestor. Každý balík môžeme prispôsobiť vám.</p>
+    <div class="package-grid">
+        <article class="package-card">
+            <p class="eyebrow">Váš deň, váš štýl</p><h3>Čistá elegancia</h3><p class="price">od 2 400 € <small>/ podujatie</small></p>
+            <p>Pre páry, ktoré si chcú svoj deň vyskladať sami.</p>
+            <ul><li>Exkluzívny prenájom vily a záhrady</li><li>Sála a základné mobiliáre</li><li>Príprava priestoru a upratovanie</li></ul>
+            <a class="text-link" href="#kontakt">Vybrať balík <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="package-card featured">
+            <p class="eyebrow">Najobľúbenejší balík</p><h3>Svadba v záhrade</h3><p class="price">od 4 200 € <small>/ podujatie</small></p>
+            <p>Harmonická oslava obklopená pokojom záhrad.</p>
+            <ul><li>Všetko z balíka Čistá elegancia</li><li>Obradné miesto a botanická výzdoba</li><li>Koordinácia svadobného dňa</li></ul>
+            <a class="button button-small" href="#kontakt">Vybrať balík <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="package-card">
+            <p class="eyebrow">Váš deň, váš štýl</p><h3>Príbeh na mieru</h3><p class="price">od 6 800 € <small>/ podujatie</small></p>
+            <p>Kompletná starostlivosť od nápadu po posledný tanec.</p>
+            <ul><li>Všetko z balíka Svadba v záhrade</li><li>Návrh konceptu a prémiová výzdoba</li><li>Kompletné plánovanie s koordinátorkou</li></ul>
+            <a class="text-link" href="#kontakt">Vybrať balík <span aria-hidden="true">↗</span></a>
+        </article>
+    </div>
+    <p class="fine-print">Ilustračné ceny zahŕňajú DPH. Catering a nápoje nie sú zahrnuté. Presnú ponuku pripravíme po konzultácii.</p>
+</section>
+
+<section class="testimonial" id="pribehy">
+    <div class="scene scene-couple" role="img" aria-label="Svadobný pár v záhrade"></div>
+    <div class="testimonial-copy">
+        <p class="eyebrow">Slová, ktoré nás tešia</p>
+        <blockquote>„Od prvého kroku do záhrady sme vedeli, že je to naše miesto. A náš deň bol ešte krajší, než sme si predstavovali.“</blockquote>
+        <p class="quote-byline">Lucia a Martin · svadba v júni 2026</p>
+        <p class="stars" aria-label="5 z 5 hviezdičiek">★★★★★</p>
+        <a class="text-link" href="#kontakt">Príbehy našich párov</a>
+    </div>
+</section>
+
+<section class="faq content-width">
+    <div class="faq-intro">
+        <p class="eyebrow">Predtým, než sa stretneme</p><h2>Možno sa práve pýtate.</h2>
+        <p>Každá svadba je iná. Ak tu nenájdete svoju odpoveď, radi vám poradíme osobne.</p>
+        <a class="text-link" href="#kontakt">Napíšte nám <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="faq-list">
+        <details open><summary>Je predbežná rezervácia záväzná?</summary><p>Nie. Je to váš prvý nezáväzný krok. Termín preveríme a ozveme sa vám.</p></details>
+        <details><summary>Môžeme mať obrad priamo v záhrade?</summary><p>Áno, záhrada ponúka niekoľko čarovných miest na obrad pod holým nebom.</p></details>
+        <details><summary>Čo ak bude v deň svadby pršať?</summary><p>Pripravíme záložný plán v priestoroch vily a oranžérie.</p></details>
+        <details><summary>Máte vlastný catering a ubytovanie?</summary><p>Spolupracujeme s overenými partnermi, ktorí vám pomôžu s cateringom aj ubytovaním.</p></details>
+    </div>
+</section>
+
+<section class="closing-cta" id="kontakt">
+    <div class="content-width">
+        <div><p class="eyebrow">Spoznajme sa osobne</p><h2>Vaše predstavy začínajú obhliadkou.</h2><p>Prejdeme sa záhradou, ukážeme vám sálu a vypočujeme si váš príbeh.</p></div>
+        <a class="button" href="mailto:ahoj@villaluka.example">Dohodnúť obhliadku <span aria-hidden="true">↗</span></a>
+    </div>
+</section>
