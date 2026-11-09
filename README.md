@@ -114,10 +114,12 @@ php -S 127.0.0.1:8000 -t public
 
 Potom otvorte [http://127.0.0.1:8000/](http://127.0.0.1:8000/). Stránky Domov a O nás sú obsluhované akciami `HomeController::index` a `HomeController::about`; spoločná navigácia a päta sú v `App/Views/Layouts/root.layout.view.php`.
 
-Alternatívne možno spustiť webový kontajner Vaííčka cez Docker Compose:
+Položka **Rezervácie** v navigácii otvorí evidenciu predbežných rezervácií. V časti **Správa** sú CRUD evidencie používateľov, balíkov, recenzií, fotoalbumov, fotografií a kontaktných správ. Rezervácie obsluhuje `ReservationController`; ostatné evidencie zdieľajú `ManagerController`. Všetky modely používajú vstavané ORM frameworku. SQL skripty na vytvorenie tabuliek sú v `docker/sql`.
+
+Alternatívne možno spustiť aplikáciu cez Docker Compose. Webový kontajner sa zostaví lokálne z `docker/Dockerfile` a používa framework Vaííčko z priečinka `Framework/`, ktorý sa doň pripája ako lokálny volume:
 
 ```powershell
-winget install PHP 8.3
+docker compose -f docker\docker-compose.yml up --build
 ```
 
-Pri tomto spôsobe je aplikácia dostupná na [http://localhost/](http://localhost/).
+Pri prvom spustení Docker stiahne základný oficiálny PHP/Apache image a obrazy MariaDB a Adminer, ak ich ešte nemáte lokálne. Image webového servera Vaííčka z GHCR sa už nepoužíva. Aplikácia je dostupná na [http://localhost/](http://localhost/).

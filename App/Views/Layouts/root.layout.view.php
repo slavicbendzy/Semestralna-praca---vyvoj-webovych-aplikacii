@@ -13,6 +13,7 @@
     <link rel="icon" href="<?= $link->asset('favicons/favicon.ico') ?>">
     <link rel="stylesheet" href="<?= $link->asset('css/domov.css') ?>">
     <link rel="stylesheet" href="<?= $link->asset('css/o-nas.css') ?>">
+    <link rel="stylesheet" href="<?= $link->asset('css/reservations.css') ?>">
 </head>
 <body>
 <header class="site-header">
@@ -26,6 +27,8 @@
         <a href="<?= $link->url('home.index') ?>#galeria">Galéria</a>
         <a href="<?= $link->url('home.index') ?>#baliky">Balíky</a>
         <a href="<?= $link->url('home.index') ?>#pribehy">Recenzie</a>
+        <a href="<?= $link->url('reservation.index') ?>">Rezervácie</a>
+        <a href="<?= $link->url('manager.index') ?>">Správa</a>
         <a href="<?= $link->url('home.index') ?>#kontakt">Kontakt</a>
     </nav>
     <div class="header-actions">
