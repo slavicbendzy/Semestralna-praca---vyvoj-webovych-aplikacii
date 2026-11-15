@@ -6,6 +6,8 @@ use App\Models\Message;
 use App\Models\Package;
 use App\Models\Photo;
 use App\Models\PhotoAlbum;
+use App\Models\Reservation;
+use App\Models\ReservationService;
 use App\Models\Review;
 use App\Models\User;
 use Framework\Core\BaseController;
@@ -42,6 +44,17 @@ class ManagerController extends BaseController
                 ['name' => 'description', 'label' => 'Popis', 'type' => 'textarea', 'required' => true],
                 ['name' => 'price', 'label' => 'Cena (€)', 'type' => 'number', 'step' => '0.01', 'min' => '0', 'required' => true],
                 ['name' => 'max_guests', 'label' => 'Maximálny počet hostí', 'type' => 'number', 'min' => '1', 'required' => true],
+            ],
+        ],
+        'services' => [
+            'title' => 'Doplnkové služby',
+            'singular' => 'doplnkovú službu',
+            'model' => ReservationService::class,
+            'fields' => [
+                ['name' => 'reservation_id', 'label' => 'Rezervácia', 'type' => 'select', 'required' => true, 'options' => []],
+                ['name' => 'name', 'label' => 'Názov služby', 'type' => 'text', 'required' => true],
+                ['name' => 'description', 'label' => 'Popis', 'type' => 'textarea', 'required' => true],
+                ['name' => 'price', 'label' => 'Cena (€)', 'type' => 'number', 'step' => '0.01', 'min' => '0', 'required' => true],
             ],
         ],
         'reviews' => [
@@ -107,11 +120,12 @@ class ManagerController extends BaseController
         /** @var class-string<Model> $modelClass */
         $modelClass = $definition['model'];
 
+        $records = $modelClass::getAll(null, [], 'id DESC');
         return $this->html([
             'entity' => $entity,
             'definition' => $definition,
             'fields' => $this->fields($entity, $definition),
-            'records' => $modelClass::getAll(null, [], 'id DESC'),
+            'records' => $records,
         ]);
     }
 
@@ -189,6 +203,23 @@ class ManagerController extends BaseController
                     $field['options'] = [];
                     foreach ($albums as $album) {
                         $field['options'][(string)$album->id] = $album->title;
+                    }
+                    break;
+                }
+            }
+            unset($field);
+        }
+        if ($entity === 'services') {
+            $reservations = Reservation::getAll(null, [], 'event_date ASC, id DESC');
+            foreach ($fields as &$field) {
+                if ($field['name'] === 'reservation_id') {
+                    $field['options'] = [];
+                    foreach ($reservations as $reservation) {
+                        $field['options'][(string)$reservation->id] = sprintf(
+                            '%s · %s',
+                            $reservation->customer_name,
+                            $reservation->event_date
+                        );
                     }
                     break;
                 }

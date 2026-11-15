@@ -26,6 +26,7 @@
         <a href="<?= $link->url('home.about') ?>">O nás</a>
         <a href="<?= $link->url('home.index') ?>#galeria">Galéria</a>
         <a href="<?= $link->url('home.index') ?>#baliky">Balíky</a>
+        <a href="<?= $link->url('manager.index', ['entity' => 'services']) ?>">Doplnkové služby</a>
         <a href="<?= $link->url('home.index') ?>#pribehy">Recenzie</a>
         <a href="<?= $link->url('reservation.index') ?>">Rezervácie</a>
         <a href="<?= $link->url('manager.index') ?>">Správa</a>

@@ -2,6 +2,7 @@
 
 /** @var \Framework\Support\LinkGenerator $link */
 /** @var \App\Models\Reservation[] $reservations */
+/** @var array<int, \App\Models\ReservationService[]> $servicesByReservation */
 $escape = static fn(string $value): string => htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
 ?>
 <section class="reservation-page content-width">
@@ -26,6 +27,7 @@ $escape = static fn(string $value): string => htmlspecialchars($value, ENT_QUOTE
                     <th>Termín</th>
                     <th>Hostia</th>
                     <th>Balík</th>
+                    <th>Doplnkové služby</th>
                     <th>Akcie</th>
                 </tr>
                 </thead>
@@ -37,6 +39,16 @@ $escape = static fn(string $value): string => htmlspecialchars($value, ENT_QUOTE
                         <td><?= $escape($reservation->event_date) ?></td>
                         <td><?= $reservation->guest_count ?></td>
                         <td><?= $escape($reservation->package_name) ?></td>
+                        <td>
+                            <?php if (($servicesByReservation[$reservation->id] ?? []) === []): ?>
+                                Žiadne
+                            <?php endif; ?>
+                            <?php foreach ($servicesByReservation[$reservation->id] ?? [] as $service): ?>
+                                <a class="reservation-edit" href="<?= $link->url('manager.edit', ['entity' => 'services', 'id' => $service->id]) ?>">
+                                    <?= $escape($service->name) ?> · <?= number_format($service->price, 2, ',', ' ') ?> €
+                                </a><br>
+                            <?php endforeach; ?>
+                        </td>
                         <td class="reservation-actions">
                             <a class="reservation-edit" href="<?= $link->url('reservation.edit', ['id' => $reservation->id]) ?>">Upraviť</a>
                             <form method="post" action="<?= $link->url('reservation.delete') ?>"

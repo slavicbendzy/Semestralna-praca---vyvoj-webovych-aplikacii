@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Reservation;
+use App\Models\ReservationService;
 use Framework\Core\BaseController;
 use Framework\Http\HttpException;
 use Framework\Http\Request;
@@ -12,8 +13,15 @@ class ReservationController extends BaseController
 {
     public function index(Request $request): Response
     {
+        $reservations = Reservation::getAll(null, [], 'event_date ASC, id DESC');
+        $servicesByReservation = [];
+        foreach (ReservationService::getAll(null, [], 'name ASC') as $service) {
+            $servicesByReservation[$service->reservation_id][] = $service;
+        }
+
         return $this->html([
-            'reservations' => Reservation::getAll(null, [], 'event_date ASC, id DESC'),
+            'reservations' => $reservations,
+            'servicesByReservation' => $servicesByReservation,
         ]);
     }
 

@@ -40,8 +40,8 @@ $escape = static fn(string $value): string => htmlspecialchars($value, ENT_QUOTE
                         </option>
                     <?php endforeach; ?>
                 </select>
-                <?php if ($entity === 'photos' && $field['name'] === 'album_id' && $field['options'] === []): ?>
-                    <small>Najskôr vytvorte fotoalbum.</small>
+                <?php if ($field['type'] === 'select' && $field['options'] === []): ?>
+                    <small>Najskôr vytvorte záznam, ktorý chcete priradiť.</small>
                 <?php endif; ?>
             <?php else: ?>
                 <input id="<?= $escape($name) ?>" name="<?= $escape($name) ?>"

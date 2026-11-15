@@ -114,7 +114,7 @@ php -S 127.0.0.1:8000 -t public
 
 Potom otvorte [http://127.0.0.1:8000/](http://127.0.0.1:8000/). Stránky Domov a O nás sú obsluhované akciami `HomeController::index` a `HomeController::about`; spoločná navigácia a päta sú v `App/Views/Layouts/root.layout.view.php`.
 
-Položka **Rezervácie** v navigácii otvorí evidenciu predbežných rezervácií. V časti **Správa** sú CRUD evidencie používateľov, balíkov, recenzií, fotoalbumov, fotografií a kontaktných správ. Rezervácie obsluhuje `ReservationController`; ostatné evidencie zdieľajú `ManagerController`. Všetky modely používajú vstavané ORM frameworku. SQL skripty na vytvorenie tabuliek sú v `docker/sql`.
+Položka **Rezervácie** v navigácii otvorí evidenciu predbežných rezervácií a zobrazuje k nim priradené doplnkové služby. Doplnková služba patrí jednej rezervácii, rezervácia môže mať viacero služieb; prepojenie používa cudzí kľúč `reservation_services.reservation_id`. V časti **Správa** a cez položku **Doplnkové služby** sú dostupné CRUD operácie nad službami vrátane výberu rezervácie pri vytváraní a úprave. CRUD evidencie používateľov, balíkov, recenzií, fotoalbumov, fotografií, doplnkových služieb a kontaktných správ zdieľajú `ManagerController`; rezervácie obsluhuje `ReservationController`. Všetky modely používajú vstavané ORM frameworku. SQL skripty na vytvorenie tabuliek a vzťahov sú v `docker/sql`.
 
 Alternatívne možno spustiť aplikáciu cez Docker Compose. Webový kontajner sa zostaví lokálne z `docker/Dockerfile` a používa framework Vaííčko z priečinka `Framework/`, ktorý sa doň pripája ako lokálny volume:
 
